@@ -1,0 +1,15 @@
+svg {
+    width: 1.5rem;
+}
+
+button {
+    border: none;
+}
+
+.moon-button {
+    background-color: #fff;
+}
+
+.sun-button{
+    display: none;
+}

@@ -3,7 +3,7 @@
     height: auto; /* Cambia a auto para que se ajuste al contenido */
     width: 100vw;
     font-family: "Inknut Antiqua", serif;
-    margin-top: 4rem; /* Ajusta el margen superior a un valor más pequeño */
+    margin-top: 6rem; /* Ajusta el margen superior a un valor más pequeño */
     padding: 1rem; /* Agrega un padding para evitar que el contenido esté pegado a los bordes */
     display: flex; /* Habilita flexbox en el contenedor principal */
     flex-direction: column; /* Alinea los elementos en columna */

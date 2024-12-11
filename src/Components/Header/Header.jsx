@@ -22,9 +22,6 @@ export function Header() {
                             </select>
                         </li>
                     </ul>
-
-                    
-
                     
                     
                 </nav>

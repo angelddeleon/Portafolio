@@ -1,12 +1,22 @@
+* {
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total */
+}
+
+body {
+    margin: 0; /* Elimina el margen por defecto del body */
+    font-family: "Inknut Antiqua", serif; /* Fuente global */
+}
+
 .main-section {
     height: 100vh;
-    width: 349px;
+    width: 100%; /* Cambia a 100% para que sea responsivo */
+    max-width: 349px; /* Mantiene el ancho máximo */
     padding: 0;
-    font-family: "Inknut Antiqua", serif;
     display: flex; /* Habilita flexbox en el contenedor principal */
     flex-direction: column; /* Alinea los elementos en columna */
     align-items: center; /* Centra los elementos horizontalmente */
     position: relative; /* Asegúrate de que el contenedor sea relativo para el posicionamiento absoluto de los hijos */
+    margin: 0 auto; /* Centra el contenedor en la página */
 }
 
 nav {
@@ -14,26 +24,27 @@ nav {
     position: fixed; /* Fija el nav en la parte superior */
     top: 0; /* Coloca el nav en la parte superior */
     left: 0; /* Asegúrate de que esté alineado a la izquierda */
-    margin-left: 0; /* Elimina el margen izquierdo */
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
     background-color: white; /* Asegúrate de que el fondo sea visible */
+    padding: 1rem 0; /* Agrega padding para mejorar la apariencia */
 }
 
 ul {
     display: flex;
     justify-content: center; /* Centra los elementos de la lista horizontalmente */
     padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
 }
 
 li {
-    margin: 1.2rem .8rem 1rem .5rem;
+    margin: 0 1rem; /* Ajusta el margen para que sea más uniforme */
     list-style: none;
 }
 
 a {
     color: black;
     text-decoration: none;
-    font-size: .7em;
+    font-size: 1em; /* Cambia a 1em para mejor legibilidad */
     font-weight: 300;
 }
 
@@ -46,28 +57,30 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 50px); /* Ajusta la altura para que no se superponga con el nav */
+    height: calc(100vh - 60px); /* Ajusta la altura para que no se superponga con el nav */
     margin: 0;
-    padding: 0;
-    padding-top: 50px; /* Agrega un padding superior para evitar que el contenido se superponga con el nav */
+    padding: 60px 0 0; /* Agrega un padding superior para evitar que el contenido se superponga con el nav */
+    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 .main-text {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     text-align: center; 
 }
 
 .main-text h2 {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Aumenta el tamaño para mejor legibilidad */
     font-weight: 400;
 }
 
 .main-text h1 {
     align-self: center;
     color: #E7DF0D;
-    margin: .2em 0px;
-    width: 9em;
+    margin: .2em 0;
+    width: 80%; /* Cambia a un porcentaje para que sea responsivo */
+    max-width: 9em; /* Mantiene el ancho máximo */
     line-height: 1.3em;
     font-size: 2.5em;
     font-weight: 100;
@@ -81,8 +94,9 @@ main {
 
 .contact-button {
     align-self: center;
-    width: 7rem;
-    margin: 20px 0px 0px 0px;
+    width: 80%; /* Cambia a un porcentaje para que sea responsivo */
+    max-width: 7rem; /* Mantiene el ancho máximo */
+    margin: 20px 0 0 0;
     padding: 10px;
     background-color: #E7DF0D;
     border: transparent;
@@ -92,8 +106,9 @@ main {
 }
 
 main img {
-    height: 20rem;
-    width: 90%;
-    justify-items: flex-end;
+    height: auto; /* Cambia a auto para mantener la proporción */
+    max-height: 20rem; /* Mantiene la altura máxima */
+    width: 90%; /* Mantiene el ancho responsivo */
     align-self: center;
 }
+

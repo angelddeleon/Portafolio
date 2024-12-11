@@ -16,6 +16,7 @@ body {
     flex-direction: column; /* Alinea los elementos en columna */
     align-items: center; /* Centra los elementos horizontalmente */
     margin: 0 auto; /* Centra el contenedor en la página */
+
 }
 
 nav {

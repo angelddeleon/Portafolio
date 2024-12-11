@@ -1,9 +1,8 @@
-
 .project-section {
     height: auto; /* Cambia a auto para que se ajuste al contenido */
     width: 100vw;
     font-family: "Inknut Antiqua", serif;
-    margin-top: 6rem; /* Ajusta el margen superior a un valor más pequeño */
+    margin-top: 8rem; /* Ajusta el margen superior a un valor más pequeño */
     padding: 1rem; /* Agrega un padding para evitar que el contenido esté pegado a los bordes */
     display: flex; /* Habilita flexbox en el contenedor principal */
     flex-direction: column; /* Alinea los elementos en columna */
@@ -17,9 +16,9 @@ h2 {
 
 .project-section-cards {
     width: 100%; /* Cambia a 100% para que sea responsivo */
-    max-width: 340px; /* Mantiene el ancho máximo */
+    max-width: 1200px; /* Mantiene el ancho máximo del contenedor de tarjetas */
     display: flex; /* Habilita flexbox para las tarjetas */
-    flex-direction: column; /* Alinea las tarjetas en columna */
+    flex-direction: column; /* Alinea las tarjetas en columna por defecto */
     align-items: center; /* Centra las tarjetas horizontalmente */
 }
 
@@ -29,14 +28,14 @@ h2 {
     align-self: center;
     justify-items: center;
     text-align: center;
-    margin: 1rem 0; /* Agrega un margen entre las tarjetas */
+    margin: 1rem; /* Agrega un margen entre las tarjetas */
     width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
     max-width: 340px; /* Mantiene el ancho máximo */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
     overflow: hidden; /* Asegúrate de que el contenido no se desborde */
 }
 
-.project-card-text{
+.project-card-text {
     padding: .1rem 1.5rem;
 }
 
@@ -54,39 +53,43 @@ p {
     font-size: 0.8em; /* Aumenta el tamaño de la fuente para mejor legibilidad */
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
-    .project-section {
-        margin-top: 1rem; /* Reduce el margen superior en pantallas más pequeñas */
+.project-card-buttons {
+    display: flex;
+    flex-direction: column; /* Mantiene los botones en columna por defecto */
+    width: 100%;
+}
+
+.card-button {
+    padding: .5rem;
+    width: 100%;
+}
+
+.view {
+    background-color: #E7DF0D;
+    color: #fff;
+}
+
+.code {
+    background-color: #161615;
+    color: #fff;
+}
+
+/* Media Query para pantallas de computadora */
+@media (min-width: 768px) {
+    .project-section-cards {
+        flex-direction: row; /* Cambia a fila en pantallas más grandes */
+        flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la siguiente línea si es necesario */
+        justify-content: center; /* Centra las tarjetas horizontalmente */
     }
 
     .project-card {
-        padding: 15px; /* Reduce el padding en pantallas más pequeñas */
-    }
-
-    img {
-        width: 12rem; /* Reduce el tamaño de la imagen en pantallas más pequeñas */
-    }
-
-    p {
-        font-size: 0.7em; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
+        width: calc(33.33% - 2rem); /* Ajusta el ancho para que quepan tres tarjetas en fila */
+        margin: 1rem; /* Margen entre las tarjetas */
     }
 }
 
-@media (max-width: 480px) {
-    .project-section {
-        margin-top: 0.5rem; /* Reduce aún más el margen superior en pantallas muy pequeñas */
-    }
-
+@media (min-width: 1024px) {
     .project-card {
-        padding: 10px; /* Reduce aún más el padding en pantallas muy pequeñas */
-    }
-
-    img {
-        width: 10rem; /* Reduce aún más el tamaño de la imagen en pantallas muy pequeñas */
-    }
-
-    p {
-        font-size: 0.6em; /* Ajusta el tamaño de la fuente en pantallas muy pequeñas */
+        width: calc(25% - 2rem); /* Ajusta el ancho para que quepan cuatro tarjetas en fila */
     }
 }

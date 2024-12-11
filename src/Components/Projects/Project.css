@@ -33,6 +33,14 @@ h2 {
     max-width: 340px; /* Mantiene el ancho máximo */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
     overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+
+    transition: .5s;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para un efecto más pronunciado */
+    transition: .5s;
 }
 
 .project-card-text {
@@ -76,6 +84,10 @@ p {
 
 /* Media Query para pantallas de computadora */
 @media (min-width: 768px) {
+    .project-section{
+        margin-top: 4rem;
+    }
+
     .project-section-cards {
         flex-direction: row; /* Cambia a fila en pantallas más grandes */
         flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la siguiente línea si es necesario */

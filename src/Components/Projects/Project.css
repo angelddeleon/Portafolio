@@ -83,6 +83,14 @@ p {
 }
 
 /* Media Query para pantallas de computadora */
+
+@media (min-width: 390px) {
+    .project-section{
+        margin-top: -10rem;
+    }
+
+}
+
 @media (min-width: 768px) {
     .project-section{
         margin-top: 4rem;
@@ -100,8 +108,3 @@ p {
     }
 }
 
-@media (min-width: 1024px) {
-    .project-card {
-        width: calc(25% - 2rem); /* Ajusta el ancho para que quepan cuatro tarjetas en fila */
-    }
-}

@@ -37,7 +37,7 @@ ul {
 }
 
 li {
-    margin: 0 1rem; /* Ajusta el margen para que sea más uniforme */
+    margin: 0 .6rem; /* Ajusta el margen para que sea más uniforme */
     list-style: none;
 }
 

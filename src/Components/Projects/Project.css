@@ -1,35 +1,49 @@
 
 .project-section {
-    height: 100vh;
+    height: auto; /* Cambia a auto para que se ajuste al contenido */
     width: 100vw;
-    font-family:  "Inknut Antiqua", serif;
-    margin-top: 3rem;
-
+    font-family: "Inknut Antiqua", serif;
+    margin-top: 2rem; /* Ajusta el margen superior a un valor más pequeño */
+    padding: 1rem; /* Agrega un padding para evitar que el contenido esté pegado a los bordes */
     display: flex; /* Habilita flexbox en el contenedor principal */
     flex-direction: column; /* Alinea los elementos en columna */
     align-items: center; /* Centra los elementos horizontalmente */
 }
 
-h2{
+h2 {
     text-align: center;
+    margin: 1rem 0; /* Agrega un margen para separar el título del contenido */
 }
 
-.project-section-cards{
-    width: 340px;
+.project-section-cards {
+    width: 100%; /* Cambia a 100% para que sea responsivo */
+    max-width: 340px; /* Mantiene el ancho máximo */
+    display: flex; /* Habilita flexbox para las tarjetas */
+    flex-direction: column; /* Alinea las tarjetas en columna */
+    align-items: center; /* Centra las tarjetas horizontalmente */
 }
 
 .project-card {
-    padding: 20px;
+    padding: 0; /* Elimina el padding para que la imagen ocupe todo el espacio */
     border-radius: 2rem;
-
     align-self: center;
     justify-items: center;
     text-align: center;
+    margin: 1rem 0; /* Agrega un margen entre las tarjetas */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+    max-width: 340px; /* Mantiene el ancho máximo */
+    box-shadow: 0 4px 30px rgba(167, 179, 5, 0.2); 
+    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
 }
 
-img {
-    width: 15rem;
-    align-self: center;
+.project-card-text{
+    padding: .1rem 1.5rem;
+}
+
+.project-card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
 }
 
 h3 {
@@ -37,6 +51,42 @@ h3 {
 }
 
 p {
-    font-size: .6em;
+    font-size: 0.8em; /* Aumenta el tamaño de la fuente para mejor legibilidad */
 }
 
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .project-section {
+        margin-top: 1rem; /* Reduce el margen superior en pantallas más pequeñas */
+    }
+
+    .project-card {
+        padding: 15px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    img {
+        width: 12rem; /* Reduce el tamaño de la imagen en pantallas más pequeñas */
+    }
+
+    p {
+        font-size: 0.7em; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-section {
+        margin-top: 0.5rem; /* Reduce aún más el margen superior en pantallas muy pequeñas */
+    }
+
+    .project-card {
+        padding: 10px; /* Reduce aún más el padding en pantallas muy pequeñas */
+    }
+
+    img {
+        width: 10rem; /* Reduce aún más el tamaño de la imagen en pantallas muy pequeñas */
+    }
+
+    p {
+        font-size: 0.6em; /* Ajusta el tamaño de la fuente en pantallas muy pequeñas */
+    }
+}

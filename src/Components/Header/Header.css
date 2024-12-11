@@ -10,6 +10,7 @@
 
 nav {
     width: 100%; /* Asegúrate de que el nav ocupe todo el ancho del contenedor */
+    margin-left: 1rem;
 }
 
 ul {

@@ -1,23 +1,30 @@
 
 .project-section {
     height: 100vh;
-    width: 375px;
-    margin-top: 1rem;
+    width: 100vw;
     font-family:  "Inknut Antiqua", serif;
+    margin-top: 2rem;
 
+    display: flex; /* Habilita flexbox en el contenedor principal */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    position: relative; /* Asegúrate de que el contenedor sea relativo para el posicionamiento absoluto de los hijos */
 }
 
 h2{
     text-align: center;
 }
 
+.project-section-cards{
+    width: 340px;
+}
+
 .project-card {
     padding: 20px;
     border-radius: 2rem;
 
-    display: flex;
-    flex-direction: column;
     align-self: center;
+    justify-items: center;
     text-align: center;
 }
 

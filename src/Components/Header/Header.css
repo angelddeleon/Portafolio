@@ -15,7 +15,6 @@ body {
     display: flex; /* Habilita flexbox en el contenedor principal */
     flex-direction: column; /* Alinea los elementos en columna */
     align-items: center; /* Centra los elementos horizontalmente */
-    position: relative; /* Asegúrate de que el contenedor sea relativo para el posicionamiento absoluto de los hijos */
     margin: 0 auto; /* Centra el contenedor en la página */
 }
 

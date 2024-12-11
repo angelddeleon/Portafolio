@@ -3,9 +3,7 @@
     width: 349px;
     padding: 0;
     font-family: "Inknut Antiqua", serif;
-    display: flex; /* Habilita flexbox en el contenedor principal */
-    flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
+
 }
 
 nav {

@@ -3,7 +3,7 @@
     height: auto; /* Cambia a auto para que se ajuste al contenido */
     width: 100vw;
     font-family: "Inknut Antiqua", serif;
-    margin-top: 2rem; /* Ajusta el margen superior a un valor más pequeño */
+    margin-top: 4rem; /* Ajusta el margen superior a un valor más pequeño */
     padding: 1rem; /* Agrega un padding para evitar que el contenido esté pegado a los bordes */
     display: flex; /* Habilita flexbox en el contenedor principal */
     flex-direction: column; /* Alinea los elementos en columna */
@@ -32,7 +32,7 @@ h2 {
     margin: 1rem 0; /* Agrega un margen entre las tarjetas */
     width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
     max-width: 340px; /* Mantiene el ancho máximo */
-    box-shadow: 0 4px 30px rgba(167, 179, 5, 0.2); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
     overflow: hidden; /* Asegúrate de que el contenido no se desborde */
 }
 

@@ -14,14 +14,18 @@ export function Header() {
                         <li><a href="#">About Me</a></li>
                         <li><a href="#">Projects</a></li>
                         <li><a href="#">Contact me</a></li>
+                        <li><ThemeButton /></li>
+                        <li>
+                            <select name="" id="">
+                                <option value="">En</option>
+                                <option value="">Es</option>
+                            </select>
+                        </li>
                     </ul>
 
-                    <ThemeButton />
+                    
 
-                    <select name="" id="">
-                        <option value="">En</option>
-                        <option value="">Es</option>
-                    </select>
+                    
                     
                 </nav>
             </header>

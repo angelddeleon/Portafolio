@@ -7,12 +7,12 @@ export function Header() {
 
 
     return (
-        <section className='main-section'>
+        <section id='aboutme' className='main-section'>
             <header>
                 <nav>
                     <ul>
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="#aboutme">About Me</a></li>
+                        <li><a href="#project">Projects</a></li>
                         <li><a href="#">Contact me</a></li>
                         <li><ThemeButton /></li>
                         <li>
@@ -35,7 +35,7 @@ export function Header() {
                     <button className='contact-button'>Contact me</button>
                 </div>
 
-                <img src={profilePic} alt="Profile" />
+                <img  src={profilePic} alt="Profile" />
             </main>
         </section>
     );

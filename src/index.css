@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
-#root{
-    overflow-y: hidden;
+body{
+    scroll-behavior: smooth;
 }
+
+#root{
+    overflow-x: hidden;  
+}
+

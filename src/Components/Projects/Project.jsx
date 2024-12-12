@@ -3,8 +3,8 @@ import ProjectImage from '../../assets/projectImage.png'
 
 export function ProjectSection() {
     return(
-        <section className="project-section">
-            <h2>Project Section</h2>
+        <section  className="project-section">
+            <h2 id='project'>Project Section</h2>
 
             <div className='project-section-cards'>
 

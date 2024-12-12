@@ -1,0 +1,36 @@
+
+
+.section-contact {
+    width: 100vw;
+    background-color: #111111;
+    padding: 2rem;
+}
+
+
+.section-contact h3 {
+    color: #fff;
+    font-weight: 900;
+}
+
+
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.links a{
+    margin: 1rem;
+}
+
+.icon {
+    color: #fff;
+    font-size: 4em;
+}
+
+@media (min-width: 768px) {
+    .contact-info{
+        flex-direction: row;
+    }
+}

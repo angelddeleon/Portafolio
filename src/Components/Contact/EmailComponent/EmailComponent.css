@@ -1,0 +1,41 @@
+.form-text {
+    width: 60%;
+    color: #E7DF0D;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+input , textarea {
+    width: 20rem;
+    padding: .6rem;
+    border: none;
+    border-radius: 1rem;
+    transition: .2s;
+}
+
+input:focus , textarea:focus {
+    width: 20rem;
+    padding: .7rem;
+    border-radius: 1rem;
+
+    outline: none;
+    transition: .2s;
+}
+
+
+textarea {
+    margin-bottom: .8rem;
+    overflow-y: hidden;
+}
+
+.send-input:hover {
+    background-color: #E7DF0D;
+    cursor: pointer;
+    color: #fff;
+    transition: .4s;
+    padding: .7rem;
+} 

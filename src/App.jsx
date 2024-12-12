@@ -1,7 +1,7 @@
 import './App.css'
 import { Header } from './Components/Header/Header'
 import { ProjectSection } from './Components/Projects/Project'
-
+import { Contact } from './Components/Contact/Conctact'
 
 function App() {
 
@@ -9,8 +9,8 @@ function App() {
     <>
       <Header></Header>
       <ProjectSection></ProjectSection>
+      <Contact></Contact>
 
-      <h4>Cambio6</h4>
     </>
   )
 }

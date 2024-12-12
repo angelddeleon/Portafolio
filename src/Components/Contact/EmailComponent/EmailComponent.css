@@ -35,7 +35,7 @@ textarea {
 
 
 .send-input{
-    height: 10%;
+    height: 2.5rem;
 }
 
 .send-input:hover {
@@ -43,7 +43,7 @@ textarea {
     cursor: pointer;
     color: #fff;
     transition: .4s;
-    padding: .7rem;
+    transform: scale(1.05);
 } 
 
 

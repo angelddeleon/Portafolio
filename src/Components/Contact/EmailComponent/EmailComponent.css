@@ -15,6 +15,7 @@ input , textarea {
     border-radius: 1rem;
     transition: .2s;
     background-color: #fff;
+    color: black;
 }
 
 input:focus , textarea:focus {
@@ -30,6 +31,11 @@ input:focus , textarea:focus {
 textarea {
     margin-bottom: .8rem;
     overflow-y: hidden;
+}
+
+
+.send-input{
+    height: 10%;
 }
 
 .send-input:hover {

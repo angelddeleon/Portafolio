@@ -1,6 +1,5 @@
 .form-text {
-    width: 60%;
-    color: #E7DF0D;
+    width: 70%;
 }
 
 form {
@@ -15,6 +14,7 @@ input , textarea {
     border: none;
     border-radius: 1rem;
     transition: .2s;
+    background-color: #fff;
 }
 
 input:focus , textarea:focus {
@@ -39,3 +39,10 @@ textarea {
     transition: .4s;
     padding: .7rem;
 } 
+
+
+@media (min-width: 768px) {
+    .form-text {
+        width: 70%;
+    }
+}

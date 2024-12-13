@@ -1,10 +1,18 @@
 import './Project.css'
 import ProjectImage from '../../assets/projectImage.png'
+import { useLanguage } from '../../hooks/LanguageContext';
 
 export function ProjectSection() {
+    const { language, toggleLanguage } = useLanguage();
+
+    const indexLanguage = language === 'en' ? 0 : 1 
+
+    let textLanguage = [ {h1 : 'Projects' } , {h1 : 'Proyectos' }]
+
+
     return(
         <section  className="project-section">
-            <h2 id='project'>Project Section</h2>
+            <h2 id='project'>{textLanguage[indexLanguage].h1}</h2>
 
             <div className='project-section-cards'>
 
@@ -47,9 +55,6 @@ export function ProjectSection() {
                         <a className='card-button code' href="#">Code</a>
                     </div>
                  </div>
-
-
-
 
             </div>
 

@@ -30,7 +30,7 @@ body {
     padding: 1rem 0; /* Agrega padding para mejorar la apariencia */
     
     opacity: 0; /* Hacer el nav invisible inicialmente */
-    transition: opacity 1s ease, transform 1s ease; /* Transición suave */
+    transition: opacity .5s ease, transform .5s ease; /* Transición suave */
 }
 
 .navbar.show {

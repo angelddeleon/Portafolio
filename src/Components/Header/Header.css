@@ -30,7 +30,7 @@ body {
     padding: 1rem 0; /* Agrega padding para mejorar la apariencia */
     
     opacity: 0; /* Hacer el nav invisible inicialmente */
-    transition: opacity .5s ease, transform .5s ease; /* Transición suave */
+    transition: opacity .8s ease, transform .8s ease; /* Transición suave */
 }
 
 .navbar.show {
@@ -80,7 +80,7 @@ main {
     text-align: center; 
 
     opacity: 0;
-    transition: opacity 0.7s ease; 
+    transition: opacity 1.2s ease; 
 }
 
 .main-text.show {
@@ -130,7 +130,7 @@ main {
     align-self: center;
 
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1.4s ease;
 }
 
 .profile-pic.show {

@@ -1,10 +1,12 @@
-import { ThemeButton } from './themeButton/ThemeButton';
+/*import { ThemeButton } from './themeButton/ThemeButton';*/
+
 import { useState, useEffect } from 'react';
 import './Header.css';
 import profilePic from '../../assets/profilePic.webp';
 import { useLanguage } from '../../hooks/LanguageContext';
 
 export function Header() {
+
     const { language, toggleLanguage } = useLanguage();
     const indexLanguage = language === 'en' ? 0 : 1;
 
@@ -22,6 +24,12 @@ export function Header() {
             button: 'Contactame'
         }
     ];
+
+    const handleContactClick = () => {
+        window.location.hash = '#contact-me'; // Cambia el hash de la URL
+    };
+
+    function scrollToSection(event) { event.preventDefault(); const targetId = event.currentTarget.getAttribute('href').slice(1); const targetElement = document.getElementById(targetId); if (targetElement) { targetElement.scrollIntoView({ behavior: 'smooth' }); } }
 
     const [showNav, setShowNav] = useState(false);
     const [showText, setShowText] = useState(false);
@@ -47,15 +55,18 @@ export function Header() {
         };
     }, []);
 
+
+
+
     return (
         <section id='aboutme' className='main-section'>
             <header>
                 <nav className={`navbar ${showNav ? 'show' : ''}`}>
                     <ul>
-                        <li><a href="#aboutme">{textLanguage[indexLanguage].nav[0]}</a></li>
-                        <li><a href="#project">{textLanguage[indexLanguage].nav[1]}</a></li>
-                        <li><a href="#">{textLanguage[indexLanguage].nav[2]}</a></li>
-                        <li><ThemeButton /></li>
+                        <li><a onClick={scrollToSection} href="#aboutme">{textLanguage[indexLanguage].nav[0]}</a></li>
+                        <li><a onClick={scrollToSection} href="#project">{textLanguage[indexLanguage].nav[1]}</a></li>
+                        <li><a onClick={scrollToSection} href="#contact-me">{textLanguage[indexLanguage].nav[2]}</a></li>
+                        {/*<li><ThemeButton /></li> */}
                         <li>
                             <select onChange={toggleLanguage} value={language}>
                                 <option value="en">En</option>
@@ -71,7 +82,7 @@ export function Header() {
                     <h2>{textLanguage[indexLanguage].saludo}</h2>
                     <h1>Fullstack Developer</h1>
                     <h3>{textLanguage[indexLanguage].description}</h3>
-                    <button className='contact-button'>{textLanguage[indexLanguage].button}</button>
+                    <button className='contact-button' onClick={handleContactClick}>{textLanguage[indexLanguage].button}</button>
                 </div>
 
                 <img className={`profile-pic ${showImage ? 'show' : ''}`} src={profilePic} alt="Profile" />

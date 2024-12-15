@@ -12,7 +12,7 @@ import { faTiktok } from '@fortawesome/free-brands-svg-icons'
 
 export function Contact() {
 
-    const { language, toggleLanguage } = useLanguage();
+    const { language } = useLanguage();
 
     const indexLanguage = language === 'en' ? 0 : 1 
   
@@ -20,7 +20,7 @@ export function Contact() {
 
     return(
         <>
-            <footer className="section-contact">
+            <footer id='contact-me' className="section-contact">
 
                 <div className="contact-info">
                     <EmailComponent />

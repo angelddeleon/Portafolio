@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faTiktok } from '@fortawesome/free-brands-svg-icons'
 
 export function Contact() {
 
@@ -29,16 +29,16 @@ export function Contact() {
                         <h3>{textLanguage[indexLanguage].socialMessage}</h3>
 
                         <div className='links' title='Github'>
-                        <a href="#">
+                        <a href="https://github.com/angelddeleon" target='blank'>
                             <FontAwesomeIcon className='icon' icon={faGithub}></FontAwesomeIcon>
                         </a>
 
-                        <a href="#" title='Linkedin'>
+                        <a href="https://www.linkedin.com/in/angeldeleonsoftwaredeveloper/" target='blank' title='Linkedin'>
                             <FontAwesomeIcon className='icon'  icon={faLinkedin}></FontAwesomeIcon>
                         </a>
 
-                        <a href="#" title='X' >
-                            <FontAwesomeIcon className='icon' icon={faXTwitter}></FontAwesomeIcon>
+                        <a href="https://www.tiktok.com/@angelintechh" title='TikTok' >
+                            <FontAwesomeIcon className='icon' icon={faTiktok}></FontAwesomeIcon>
                         </a>
                         
 

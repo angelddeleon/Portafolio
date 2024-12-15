@@ -19,14 +19,23 @@ body {
 
 }
 
-nav {
+.navbar {
     width: 100%; /* Asegúrate de que el nav ocupe todo el ancho del contenedor */
     position: fixed; /* Fija el nav en la parte superior */
     top: 0; /* Coloca el nav en la parte superior */
-    left: 0; /* Asegúrate de que esté alineado a la izquierda */
+    left: 50%; /* Asegúrate de que esté alineado a la izquierda */
+    transform: translateX(-50%); /* Centra el nav horizontalmente */
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
     background-color: white; /* Asegúrate de que el fondo sea visible */
     padding: 1rem 0; /* Agrega padding para mejorar la apariencia */
+    
+    opacity: 0; /* Hacer el nav invisible inicialmente */
+    transition: opacity 1s ease, transform 1s ease; /* Transición suave */
+}
+
+.navbar.show {
+    opacity: 1; /* Hacer el nav completamente visible */
+    transform: translateX(-50%) translateX(0); /* Mover a la posición original */
 }
 
 ul {
@@ -51,6 +60,7 @@ a {
 select {
     height: 2rem;
     align-self: center;
+    border: 1px solid black;
 }
 
 main {
@@ -68,6 +78,13 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center; 
+
+    opacity: 0;
+    transition: opacity 0.7s ease; 
+}
+
+.main-text.show {
+    opacity: 1;
 }
 
 .main-text h2 {
@@ -106,11 +123,18 @@ main {
     border-radius: 1rem;
 }
 
-main img {
+.profile-pic {
     height: auto; /* Cambia a auto para mantener la proporción */
     max-height: 20rem; /* Mantiene la altura máxima */
     width: 90%; /* Mantiene el ancho responsivo */
     align-self: center;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.profile-pic.show {
+    opacity: 1;
 }
 
 

@@ -30,15 +30,15 @@ export function Header() {
     useEffect(() => {
         const navTimer = setTimeout(() => {
             setShowNav(true);
-        }, 50); // Retraso para la navegación
+        }, 100); // Retraso para la navegación
 
         const textTimer = setTimeout(() => {
             setShowText(true);
-        }, 50); // Retraso para el texto principal
+        }, 120); // Retraso para el texto principal
 
         const imageTimer = setTimeout(() => {
             setShowImage(true);
-        }, 50); // Retraso para la imagen
+        }, 100); // Retraso para la imagen
 
         return () => {
             clearTimeout(navTimer);

@@ -26,10 +26,16 @@ export function Header() {
     ];
 
     const handleContactClick = () => {
-        window.location.hash = '#contact-me'; // Cambia el hash de la URL
+        window.location.hash = '#contact-me'; 
     };
 
-    function scrollToSection(event) { event.preventDefault(); const targetId = event.currentTarget.getAttribute('href').slice(1); const targetElement = document.getElementById(targetId); if (targetElement) { targetElement.scrollIntoView({ behavior: 'smooth' }); } }
+    function scrollToSection(event) { 
+        event.preventDefault(); 
+        const targetId = event.currentTarget.getAttribute('href').slice(1); 
+        const targetElement = document.getElementById(targetId); 
+        if (targetElement) { 
+            targetElement.scrollIntoView({ behavior: 'smooth' }); 
+    } }
 
     const [showNav, setShowNav] = useState(false);
     const [showText, setShowText] = useState(false);
@@ -38,15 +44,15 @@ export function Header() {
     useEffect(() => {
         const navTimer = setTimeout(() => {
             setShowNav(true);
-        }, 100); // Retraso para la navegación
+        }, 100); 
 
         const textTimer = setTimeout(() => {
             setShowText(true);
-        }, 120); // Retraso para el texto principal
+        }, 120); 
 
         const imageTimer = setTimeout(() => {
             setShowImage(true);
-        }, 100); // Retraso para la imagen
+        }, 100); 
 
         return () => {
             clearTimeout(navTimer);

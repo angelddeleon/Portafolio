@@ -30,7 +30,7 @@ h2 {
     text-align: center;
     margin: 1rem;
     width: 100%;
-    max-width: 340px; 
+ 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
     overflow: hidden; 
 
@@ -86,25 +86,28 @@ p {
 
 @media (min-width: 390px) {
     .project-section{
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
 }
 
+/* Computer view */
+
 @media (min-width: 768px) {
     .project-section{
         margin-top: 4rem;
+        
     }
 
     .project-section-cards {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap; 
         justify-content: center;
     }
 
+
     .project-card {
-        width: calc(33.33% - 2rem);
-        margin: 1rem; 
+        width: calc(33.33% - 2rem); 
     }
 }
 

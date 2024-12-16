@@ -48,7 +48,10 @@ export function ProjectSection() {
                 }
 
                 <div className="project-card">
-                    <img src={ProjectImage} alt="" />
+                    <div className='project-card-image'>
+                        <img src={ProjectImage} alt="" />
+                    </div>
+                    
                     <div className="project-card-text">
                         <h3>Google Project</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, explicabo. Labore quam odit laborum officiis! Blanditiis amet sequi ipsum, porro, molestias tempora, minus eveniet dolore exercitationem </p>

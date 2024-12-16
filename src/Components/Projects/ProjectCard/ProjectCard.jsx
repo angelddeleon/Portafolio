@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import './ProjectCard.css'
+//import './ProjectCard.css'
 
 
 export function ProjectCard ({images, titleProject, description}) {

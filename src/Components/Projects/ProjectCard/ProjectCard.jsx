@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+
+
 //import './ProjectCard.css'
 
 
-export function ProjectCard ({images, titleProject, description}) {
+export function ProjectCard ({images, titleProject, description, icons}) {
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Cambiar la imagen cada segundo
     useEffect(() => {
@@ -14,38 +18,48 @@ export function ProjectCard ({images, titleProject, description}) {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 2000);
 
-        return () => clearInterval(interval); // Limpiar el intervalo al desmontar
+        return () => clearInterval(interval);
     }, [images.length]);
 
-    // Función para abrir el modal
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
-
-    // Función para cerrar el modal
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
 
 
     return (
+
         <div className="project-card">
-            <img src={images[currentImageIndex]} alt={titleProject} onClick={openModal} />
-            <div className="project-card-text">
-                <h3>{titleProject}</h3>
-                <p>{description}</p>
-            </div>
-            <div className="project-card-buttons">
-                <a className='card-button view' href="#">View</a>
-                <a className='card-button code' href="#">Code</a>
+            <div className='project-card-image'>
+                <img src={images[currentImageIndex]} alt={titleProject} />
             </div>
 
-            {/* Modal para mostrar la imagen completa */}
-            {isModalOpen && (
-                <div className="modal" onClick={closeModal}>
-                    <img src={images[currentImageIndex]} alt={titleProject} className="modal-image" />
+            <div className="project-card-content">
+
+                <div className="project-card-text">
+                    <h3>{titleProject}</h3>
+                    <p>{description}</p>
                 </div>
-            )}
+
+                <div className="icons">
+                    {
+                        icons.tecnologia.map((nameTechnology, index) =>{
+                            return(
+                                <FontAwesomeIcon key={nameTechnology} title={nameTechnology} className='iconTechnology' icon={icons.icons[index]} />
+                            )
+                        })
+                    }
+
+
+                </div>
+
+                <div className="project-card-buttons">
+                    <a className='card-links view' href="#">
+                        <FontAwesomeIcon className='iconLink' icon={faLink} />
+                        <p>View</p>
+                    </a>
+                    <a className='card-links code' href="#">
+                        <FontAwesomeIcon className='iconLink' icon={faCode} />
+                        <p>Code</p>
+                    </a>
+                </div>
+            </div>
         </div>
     );
 

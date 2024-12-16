@@ -68,9 +68,24 @@ p {
 }
 
 .card-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: .5rem;
     width: 100%;
 }
+
+.card-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    width: 100%;
+    font-size: 1em;
+}
+
+
+
 
 .view {
     background-color: #E7DF0D;
@@ -80,6 +95,12 @@ p {
 .code {
     background-color: #161615;
     color: #fff;
+}
+
+.iconTechnology{
+    color: black;
+    font-size: 3em;
+    padding: .5rem;
 }
 
 
@@ -95,8 +116,7 @@ p {
 
 @media (min-width: 768px) {
     .project-section{
-        margin-top: 4rem;
-        
+        margin-top: 4rem;   
     }
 
     .project-section-cards {
@@ -107,7 +127,7 @@ p {
 
 
     .project-card {
-        width: calc(33.34% - 2rem); 
+        width: 40%; 
     }
 }
 

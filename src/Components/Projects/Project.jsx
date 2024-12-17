@@ -16,6 +16,7 @@ import img4 from '../../assets/imageProjects/autowork4.png';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons'
 import { faCss } from '@fortawesome/free-brands-svg-icons'
 import { faJs } from '@fortawesome/free-brands-svg-icons'
+import { faNode } from '@fortawesome/free-brands-svg-icons'
 
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
@@ -28,20 +29,32 @@ export function ProjectSection() {
     const { language } = useLanguage();
 
     const indexLanguage = language === 'en' ? 0 : 1 
-
+ 
     let textLanguage = [{h1 : 'Projects' } , {h1 : 'Proyectos' }]
 
+    
+
     const projects = [
-        {
+        [{
             id:1,
             images: [img1, img2, img3, img4],
             nameProject: "AutoWork",
-            description: "Trabaje en una aplicacion web para talleres automotrices mejorando su interfaz de Administrador, Cliente y Mecanicos. Usando Principios de UX design y Responsive Design. Fui parte del backend creando la API y agregando funciones a esta",
+            description: "Work on a web application for automotive workshops improving its Administrator, Customer and Mechanic interface. Using UX design and Responsive Design Principles. I was part of the backend using the sqlLite database, creating the API and adding functions to it",
             icons: {
-                tecnologia: ['HTML', 'CSS', 'JavaScript'],
-                icons: [faHtml5, faCss, faJs]
+                tecnologia: ['HTML', 'CSS', 'JavaScript', 'NodeJs'],
+                icons: [faHtml5, faCss, faJs, faNode]
             }
-        }
+        }],
+        [{
+            id:1,
+            images: [img1, img2, img3, img4],
+            nameProject: "AutoWork",
+            description: "Trabaje en una aplicacion web para talleres automotrices mejorando su interfaz de Administrador, Cliente y Mecanicos. Usando Principios de UX design y Responsive Design. Fui parte del backend usando la base de datos sqlLite, creando la API y agregando funciones a esta",
+            icons: {
+                tecnologia: ['HTML', 'CSS', 'JavaScript', 'NodeJs'],
+                icons: [faHtml5, faCss, faJs, faNode]
+            }
+        }]
     ]
     
 
@@ -54,7 +67,7 @@ export function ProjectSection() {
 
                 {
 
-                    projects.map((project) =>{
+                    projects[indexLanguage].map((project) =>{
                         return(
                             <ProjectCard 
                                 key={project.id} 

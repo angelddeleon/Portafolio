@@ -5,7 +5,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 
-//import './ProjectCard.css'
+import './ProjectCard.css'
 
 
 export function ProjectCard ({images, titleProject, description, icons}) {

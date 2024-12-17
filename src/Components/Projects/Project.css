@@ -22,88 +22,6 @@ h2 {
     align-items: center; 
 }
 
-.project-card {
-    padding: 0; 
-    border-radius: 2rem;
-    align-self: center;
-    justify-items: center;
-    text-align: center;
-    margin: 1rem;
-    width: 100%;
- 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
-    overflow: hidden; 
-
-    transition: .5s;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3); 
-    transition: .5s;
-}
-
-.project-card-text {
-    padding: .1rem 1.5rem;
-}
-
-.project-card img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-}
-
-h3 {
-    font-weight: 300;
-}
-
-p {
-    font-size: 0.8em; 
-}
-
-.project-card-buttons {
-    display: flex;
-    flex-direction: column; 
-    width: 100%;
-}
-
-.card-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: .5rem;
-    width: 100%;
-}
-
-.card-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: .5rem;
-    width: 100%;
-    font-size: 1em;
-}
-
-
-
-
-.view {
-    background-color: #E7DF0D;
-    color: #fff;
-}
-
-.code {
-    background-color: #161615;
-    color: #fff;
-}
-
-.iconTechnology{
-    color: black;
-    font-size: 3em;
-    padding: .5rem;
-}
-
-
 
 @media (min-width: 390px) {
     .project-section{
@@ -120,14 +38,10 @@ p {
     }
 
     .project-section-cards {
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap; 
         justify-content: center;
     }
 
-
-    .project-card {
-        width: 40%; 
-    }
 }
 

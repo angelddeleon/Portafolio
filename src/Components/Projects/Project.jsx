@@ -1,7 +1,4 @@
 import './Project.css'
-import ProjectImage from '../../assets/projectImage.png'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Images
 
@@ -43,7 +40,7 @@ export function ProjectSection() {
                 tecnologia: ['HTML', 'CSS', 'JavaScript', 'NodeJs'],
                 icons: [faHtml5, faCss, faJs, faNode]
             },
-            links: ['#', 'https://github.com/angelddeleon/Gestion_Talleres']
+            links: ['https://github.com/angelddeleon/Gestion_Talleres', 'https://github.com/angelddeleon/Gestion_Talleres']
         }
     ]
     

@@ -1,59 +1,59 @@
 * {
-    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total */
+    box-sizing: border-box; 
 }
 
 body {
-    margin: 0; /* Elimina el margen por defecto del body */
-    font-family: "Inknut Antiqua", serif; /* Fuente global */
+    margin: 0;
+    font-family: "Inknut Antiqua", serif; 
 }
 
 .main-section {
     height: 100vh;
-    width: 100%; /* Cambia a 100% para que sea responsivo */
-    max-width: 349px; /* Mantiene el ancho máximo */
+    width: 100%; 
+    max-width: 349px; 
     padding: 0;
-    display: flex; /* Habilita flexbox en el contenedor principal */
-    flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    margin: 0 auto; /* Centra el contenedor en la página */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 auto; 
 
 }
 
 .navbar {
-    width: 100%; /* Asegúrate de que el nav ocupe todo el ancho del contenedor */
-    position: fixed; /* Fija el nav en la parte superior */
-    top: 0; /* Coloca el nav en la parte superior */
-    left: 50%; /* Asegúrate de que esté alineado a la izquierda */
-    transform: translateX(-50%); /* Centra el nav horizontalmente */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    background-color: white; /* Asegúrate de que el fondo sea visible */
-    padding: 1rem 0; /* Agrega padding para mejorar la apariencia */
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 1000; 
+    background-color: white; 
+    padding: 1rem 0; 
     
-    opacity: 0; /* Hacer el nav invisible inicialmente */
-    transition: opacity .8s ease, transform .8s ease; /* Transición suave */
+    opacity: 0; 
+    transition: opacity .8s ease, transform .8s ease; 
 }
 
 .navbar.show {
-    opacity: 1; /* Hacer el nav completamente visible */
-    transform: translateX(-50%) translateX(0); /* Mover a la posición original */
+    opacity: 1; 
+    transform: translateX(-50%) translateX(0); 
 }
 
 ul {
     display: flex;
-    justify-content: center; /* Centra los elementos de la lista horizontalmente */
-    padding: 0; /* Elimina el padding por defecto */
-    margin: 0; /* Elimina el margen por defecto */
+    justify-content: center; 
+    padding: 0; 
+    margin: 0; 
 }
 
 li {
-    margin: 0 .6rem; /* Ajusta el margen para que sea más uniforme */
+    margin: 0 .6rem; 
     list-style: none;
 }
 
 a {
     color: black;
     text-decoration: none;
-    font-size: .7em; /* Cambia a 1em para mejor legibilidad */
+    font-size: .7em; 
     font-weight: 300;
 }
 
@@ -69,10 +69,10 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 60px); /* Ajusta la altura para que no se superponga con el nav */
+    height: calc(100vh - 60px); 
     margin: 0;
-    padding: 60px 0 0; /* Agrega un padding superior para evitar que el contenido se superponga con el nav */
-    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 60px 0 0; 
+    align-items: center;
 }
 
 .main-text {
@@ -90,7 +90,7 @@ main {
 }
 
 .main-text h2 {
-    font-size: 1.5em; /* Aumenta el tamaño para mejor legibilidad */
+    font-size: 1.5em; 
     font-weight: 400;
     margin: 0;
 }
@@ -99,8 +99,8 @@ main {
     align-self: center;
     color: #E7DF0D;
     margin: 0em 0;
-    width: 80%; /* Cambia a un porcentaje para que sea responsivo */
-    max-width: 9em; /* Mantiene el ancho máximo */
+    width: 80%; 
+    max-width: 9em; 
     line-height: 1.3em;
     font-size: 2.5em;
     font-weight: 100;
@@ -114,8 +114,8 @@ main {
 
 .contact-button {
     align-self: center;
-    width: 80%; /* Cambia a un porcentaje para que sea responsivo */
-    max-width: 7rem; /* Mantiene el ancho máximo */
+    width: 80%; 
+    max-width: 7rem; 
     margin: 20px 0 0 0;
     padding: 10px;
     background-color: #E7DF0D;
@@ -123,12 +123,13 @@ main {
     color: #fff;
     font-size: 1em;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .profile-pic {
-    height: auto; /* Cambia a auto para mantener la proporción */
-    max-height: 20rem; /* Mantiene la altura máxima */
-    width: 90%; /* Mantiene el ancho responsivo */
+    height: auto; 
+    max-height: 20rem; 
+    width: 90%; 
     align-self: center;
 
     opacity: 0;
@@ -140,5 +141,5 @@ main {
 }
 
 
-/* Media query para pantallas de computadora y tablet */
+
 

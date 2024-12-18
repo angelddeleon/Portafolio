@@ -13,15 +13,15 @@ export function Header() {
     let textLanguage = [
         {
             nav: ['About Me', 'Projects', 'Contact me'],
-            saludo: 'Hi I am Angel De Leon',
-            description: 'I have more than 1 year experience creating web applications',
+            saludo: 'Hi, I am Ángel De León.',
+            description: 'I have more than 1 year of experience creating web applications.',
             button: 'Contact me'
         },
         {
-            nav: ['Sobre mi', 'Proyectos', 'Contactame'],
-            saludo: 'Hola Soy Angel De Leon',
-            description: 'Tengo mas de 1 ano de experiencia creando aplicaciones web',
-            button: 'Contactame'
+            nav: ['Sobre mí', 'Proyectos', 'Contáctame'],
+            saludo: 'Hola, soy Ángel De León.',
+            description: 'Tengo más de 1 año de experiencia creando aplicaciones web.',
+            button: 'Contáctame'
         }
     ];
 

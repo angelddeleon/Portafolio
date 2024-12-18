@@ -4,11 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
+import { useLanguage } from '../../../hooks/LanguageContext';
 
 import './ProjectCard.css'
 
 
-export function ProjectCard ({images, titleProject, description, icons}) {
+export function ProjectCard ({images, titleProject, descriptions, icons, links}) {
+    const { language } = useLanguage();
+
+    const indexLanguage = language === 'en' ? 0 : 1 
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -34,7 +38,7 @@ export function ProjectCard ({images, titleProject, description, icons}) {
 
                 <div className="project-card-text">
                     <h3>{titleProject}</h3>
-                    <p>{description}</p>
+                    <p>{descriptions[indexLanguage]}</p>
                 </div>
 
                 <div className="icons">
@@ -50,11 +54,11 @@ export function ProjectCard ({images, titleProject, description, icons}) {
                 </div>
 
                 <div className="project-card-buttons">
-                    <a className='card-links view' href="#">
+                    <a className='card-links view' href={links[0]} target='_blank'>
                         <FontAwesomeIcon className='iconLink' icon={faLink} />
                         <p>View</p>
                     </a>
-                    <a className='card-links code' href="#">
+                    <a className='card-links code' href={links[1]} target="_blank">
                         <FontAwesomeIcon className='iconLink' icon={faCode} />
                         <p>Code</p>
                     </a>

@@ -25,11 +25,12 @@ export const EmailComponent = () => {
       );
   };
 
-  const { language, toggleLanguage } = useLanguage();
+  const { language } = useLanguage();
 
   const indexLanguage = language === 'en' ? 0 : 1 
 
-  let textLanguage = [ {message : 'Send me a email if you want me to be part of your team', form: ['Name', 'Email', 'Message'], socialMessage: 'You can find me in' } , {message : 'Enviame un email si deseas que forme parte de tu equipo', form: ['Nombre', 'Email', 'Mensaje'], socialMessage: 'Tambien me puedes encontrar en' }]
+  let textLanguage = [ 
+    {message : 'Send me an email if you want me to be part of your team', form: ['Name', 'Email', 'Message'], socialMessage: 'You can find me in' } , {message : 'Envíame un correo electrónico si deseas que forme parte de tu equipo.', form: ['Nombre', 'Email', 'Mensaje'], socialMessage: 'También me puedes encontrar en' }]
 
 
   return (
